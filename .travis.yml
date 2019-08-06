@@ -6,4 +6,5 @@ script:
 install:
  - npm install -g firebase-tools
 after_success:
+ - ng build --prod=true --outputPath=public
  - firebase deploy --token $FIREBASE_TOKEN
